@@ -8,13 +8,31 @@
         body {
             margin: 0;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
         }
         canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
             display: block;
+        }
+        .message {
+            z-index: 1;
+            font-size: 10rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px white, 0 0 20px red;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <div class="message">Love Daisy</div>
     <canvas id="fireworks"></canvas>
     <script>
         const canvas = document.getElementById('fireworks');
@@ -95,4 +113,3 @@
     </script>
 </body>
 </html>
-
